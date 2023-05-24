@@ -180,8 +180,8 @@ jobs:
           BiocManager::install("ComplexHeatmap", update = FALSE)
           remotes::install_cran("circlize")
           remotes::install_cran("tidyverse")
-          remotes::install_cran("DiagrammeR", type = ifelse("${{ runner.os }}" == "Windows", "win.binary", getOption("pkgType"))
-          remotes::install_cran("igraph", type = ifelse("${{ runner.os }}" == "Windows", "win.binary", getOption("pkgType"))
+          remotes::install_cran("DiagrammeR", type = ifelse("${{ runner.os }}" == "Windows", "win.binary", getOption("pkgType")))
+          remotes::install_cran("igraph", type = ifelse("${{ runner.os }}" == "Windows", "win.binary", getOption("pkgType")))
           remotes::install_local(dependencies = TRUE, repos = BiocManager::repositories(), build_vignettes = FALSE, upgrade = TRUE)
         continue-on-error: true
         shell: Rscript {0}
